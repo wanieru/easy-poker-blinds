@@ -1,5 +1,40 @@
 var schedule = [];
 var minPerRound = 0;
+
+var currentLevel = 0;
+var currentTime = 0;
+var counting = false;
+
+function update()
+{
+  $("#level").text(`Level ${currentLevel + 1}`);
+  $("#blinds").text(`${schedule[currentLevel]}/${schedule[currentLevel] * 2}`);
+  $("#timer").text(currentTime.toMMSS());
+}
+function tick()
+{
+  if(counting)
+  {
+    currentTime--;
+    if(currentTime < 0)
+    {
+        currentTime = minPerRound * 60;
+        currentLevel++;
+        if(currentLevel >= schedule.length) currentLevel = schedule.length - 1;
+    }
+    update();
+  }
+}
+function move(dir)
+{
+  currentLevel += dir;
+  if(currentLevel >= schedule.length) currentLevel = schedule.length - 1;
+  if(currentLevel < 0) currentLevel = 0;
+  currentTime = minPerRound * 60;
+  update();
+}
+setInterval(tick, 1000);
+
 function go()
 {
   var length = $("#length").val() * 60;
@@ -7,7 +42,7 @@ function go()
   var base = $("#smallest_denomination").val();
   var rate = $("#rate").val();
   var starting_percentage = 0.01;
-  var end_percentage = 1;
+  var end_percentage = 0.5;
 
   schedule = [];
   var amount = approach(0, chips * starting_percentage, base);
@@ -18,9 +53,10 @@ function go()
     schedule.push(amount);
   }
 
+  var minute_step = 5;
   minPerRound = length / (schedule.length - 1);
-  minPerRound = Math.round(minPerRound / 5) * 5;
-  if(minPerRound < 5) minPerRound = 5;
+  minPerRound = Math.round(minPerRound / minute_step) * minute_step;
+  if(minPerRound < minute_step) minPerRound = minute_step;
 
   $("#description").text(`Schedule for ${length / 60} hour poker tournament with ${chips} starting chips and ${base} as the smallest denomination. Blind increment is ${rate}x.`);
   $("#table-body").empty();
@@ -40,6 +76,13 @@ function go()
       tr.append(`<td>${time}</td>`);
       $("#table-body").append(tr);
   }
+
+  currentLevel = 0;
+  currentTime = minPerRound * 60;
+  counting = true;
+  update();
+  $(".initially_hidden").show();
+  $(".settings").hide();
 }
 Number.prototype.toMMSS = function () {
     var sec = this;
@@ -83,3 +126,6 @@ function approach(start, target, base)
 }
 
 $("#start_button").click(go);
+$("#prev").click(function(){move(-1);});
+$("#next").click(function(){move(1);});
+$(".initially_hidden").hide();

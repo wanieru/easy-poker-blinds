@@ -20,7 +20,7 @@
 
 <body>
   <div class="container pt-3 pb-5">
-    <div class="card border-primary mb-3">
+    <div class="card border-primary mb-3 settings">
       <div class="card-header">Settings</div>
       <div class="card-body">
         <div class="form-group row">
@@ -56,19 +56,19 @@
         <button id="start_button" type="button" class="btn btn-primary">Start</button>
       </div>
     </div>
-    <div class="card border-primary mb-3">
+    <div class="card border-primary mb-3 initially_hidden">
       <div class="card-header">Timer</div>
       <div class="card-body">
-        <h2 class="text-center" id="level">Round 1</h2>
-        <h1 class="text-center" id="blinds">50/100</h1>
-        <h2 class="text-center" id="timer">05:25</h2>
+        <h2 class="text-center" id="level"></h2>
+        <h1 class="text-center" id="blinds"></h1>
+        <h2 class="text-center" id="timer"></h2>
         <div class="text-center">
-          <button type="button" class="btn btn-primary btn-lg">prev</button>
-          <button type="button" class="btn btn-primary btn-lg">next</button>
+          <button id="prev" type="button" class="btn btn-primary btn-lg">prev</button>
+          <button id="next" type="button" class="btn btn-primary btn-lg">next</button>
         </div>
       </div>
     </div>
-    <div class="card border-primary mb-3">
+    <div class="card border-primary mb-3 initially_hidden">
       <div class="card-header">Schedule</div>
       <div class="card-body">
         <p id="description"></p>
