@@ -21,55 +21,55 @@
 <body>
   <div class="container pt-3 pb-5">
     <div class="card border-primary mb-3 settings">
-      <div class="card-header">Settings</div>
+      <div class="card-header">⚙️ Settings</div>
       <div class="card-body">
         <div class="form-group row">
-          <label for="test" class="col-sm-2 col-form-label">Target Length (hours)</label>
-          <div class="col-sm-10">
+          <label for="test" class="col-sm-4 col-form-label">⏲️ Target Length (hours)</label>
+          <div class="col-sm-6">
             <input type="number" class="form-control" id="length" value="1" step="0.25" min="0.25" max=24>
           </div>
         </div>
         <div class="form-group row">
-          <label for="test" class="col-sm-2 col-form-label">Starting Chips</label>
-          <div class="col-sm-10">
+          <label for="test" class="col-sm-4 col-form-label">💸 Starting Chips</label>
+          <div class="col-sm-6">
             <input type="number" class="form-control" id="starting_amount" value="5000" step=1 min=1 max=100000000>
           </div>
         </div>
         <div class="form-group row">
-          <label for="test" class="col-sm-2 col-form-label">Smallest Chip Denomination</label>
-          <div class="col-sm-10">
+          <label for="test" class="col-sm-4 col-form-label">⚛️ Smallest Chip Denomination</label>
+          <div class="col-sm-6">
             <input type="number" class="form-control" id="smallest_denomination" value="10" step=1 min=1 max=100000000>
           </div>
         </div>
         <div class="form-group row">
-          <label for="test" class="col-sm-2 col-form-label">Blind Increment</label>
-          <div class="col-sm-10">
+          <label for="test" class="col-sm-4 col-form-label">📈 Blind Increment</label>
+          <div class="col-sm-6">
             <select class="custom-select" id="rate">
-              <option value="1.25">Low (1.25x)</option>
-              <option value="1.5" selected>Normal (1.5x)</option>
-              <option value="1.75">Medium (1.75x)</option>
-              <option value="2">High (2x)</option>
-              <option value="2.5">Extreme (2.5x)</option>
+              <option value="1.25">🙂 Low (1.25x)</option>
+              <option value="1.5" selected>😄 Normal (1.5x)</option>
+              <option value="1.75">🤔 Medium (1.75x)</option>
+              <option value="2">😑 High (2x)</option>
+              <option value="2.5">😰 Extreme (2.5x)</option>
             </select>
           </div>
         </div>
-        <button id="start_button" type="button" class="btn btn-primary">Start</button>
+        <button id="start_button" type="button" class="btn btn-primary">✔️ Start</button>
       </div>
     </div>
     <div class="card border-primary mb-3 initially_hidden">
-      <div class="card-header">Timer</div>
+      <div class="card-header">⏲️ Timer</div>
       <div class="card-body">
         <h2 class="text-center" id="level"></h2>
         <h1 class="text-center" id="blinds"></h1>
         <h2 class="text-center" id="timer"></h2>
         <div class="text-center">
-          <button id="prev" type="button" class="btn btn-primary btn-lg">prev</button>
-          <button id="next" type="button" class="btn btn-primary btn-lg">next</button>
+          <button id="prev" type="button" class="btn btn-primary btn-lg">🠔</button>
+          <button id="next" type="button" class="btn btn-primary btn-lg">🠖</button>
         </div>
       </div>
     </div>
     <div class="card border-primary mb-3 initially_hidden">
-      <div class="card-header">Schedule</div>
+      <div class="card-header">📅 Schedule</div>
       <div class="card-body">
         <p id="description"></p>
         <table class="table table-hover">
