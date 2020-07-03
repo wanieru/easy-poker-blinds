@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>⏲️ Easy Blinds</title>
+  <title>⏲️ Easy Poker Blinds</title>
   <meta name="description" content="Poker Clock">
   <meta name="author" content="Wanieru">
 
@@ -20,7 +20,42 @@
 
 <body>
   <div class="container pt-3 pb-5">
-
+    <div class="card border-primary mb-3">
+      <div class="card-header">Settings</div>
+      <div class="card-body">
+        <div class="form-group row">
+          <label for="test" class="col-sm-2 col-form-label">Target Length (hours)</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="length" value="1">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="test" class="col-sm-2 col-form-label">Starting Chips</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="starting_amount" value="5000">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="test" class="col-sm-2 col-form-label">Smallest Chip Denomination</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="smallest_denomination" value="10">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="test" class="col-sm-2 col-form-label">Blind Increment</label>
+          <div class="col-sm-10">
+            <select class="custom-select" id="rate">
+              <option value="1.25">Low (1.25x)</option>
+              <option value="1.5" selected>Normal (1.5x)</option>
+              <option value="1.75">Medium (1.75x)</option>
+              <option value="2">High (2x)</option>
+              <option value="2.5">Extreme (2x)</option>
+            </select>
+          </div>
+        </div>
+        <button id="start_button" type="button" class="btn btn-primary">Start</button>
+      </div>
+    </div>
   </div>
   <script src="js/main.js?v=<?php echo $v; ?>"></script>
 </body>
