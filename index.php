@@ -56,6 +56,36 @@
         <button id="start_button" type="button" class="btn btn-primary">Start</button>
       </div>
     </div>
+    <div class="card border-primary mb-3">
+      <div class="card-header">Timer</div>
+      <div class="card-body">
+        <h2 class="text-center" id="level">Round 1</h2>
+        <h1 class="text-center" id="blinds">50/100</h1>
+        <h2 class="text-center" id="timer">05:25</h2>
+        <div class="text-center">
+          <button type="button" class="btn btn-primary btn-lg">prev</button>
+          <button type="button" class="btn btn-primary btn-lg">next</button>
+        </div>
+      </div>
+    </div>
+    <div class="card border-primary mb-3">
+      <div class="card-header">Schedule</div>
+      <div class="card-body">
+        <p id="description"></p>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col">Level</th>
+              <th scope="col">Small Blind</th>
+              <th scope="col">Big Blind</th>
+              <th scope="col">Time</th>
+            </tr>
+          </thead>
+          <tbody id="table-body">
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
   <script src="js/main.js?v=<?php echo $v; ?>"></script>
 </body>
