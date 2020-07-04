@@ -24,6 +24,12 @@
       <div class="card-header">⚙️ Settings</div>
       <div class="card-body">
         <div class="form-group row">
+          <label for="test" class="col-sm-4 col-form-label">👩 Players</label>
+          <div class="col-sm-6">
+            <input type="number" class="form-control" id="players" value="4" step="1" min="2" max="1000">
+          </div>
+        </div>
+        <div class="form-group row">
           <label for="test" class="col-sm-4 col-form-label">⏲️ Target Length (hours)</label>
           <div class="col-sm-6">
             <input type="number" class="form-control" id="length" value="1" step="0.25" min="0.25" max=24>
@@ -57,14 +63,14 @@
       </div>
     </div>
     <div class="card border-primary mb-3 initially_hidden">
-      <div class="card-header">⏲️ Timer</div>
+      <div class="card-header">⏲️ Timer <div class="float-right"><button id="settings_button" type="button" class="btn btn-primary btn-lg">⚙️ Settings</button></div></div>
       <div class="card-body">
         <h2 class="text-center" id="level"></h2>
         <h1 class="text-center" id="blinds"></h1>
         <h2 class="text-center" id="timer"></h2>
         <div class="text-center">
-          <button id="prev" type="button" class="btn btn-primary btn-lg">🠔</button>
-          <button id="next" type="button" class="btn btn-primary btn-lg">🠖</button>
+          <button id="prev" type="button" class="btn btn-primary btn-lg">⬅️</button>
+          <button id="next" type="button" class="btn btn-primary btn-lg">➡️</button>
         </div>
       </div>
     </div>
