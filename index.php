@@ -1,5 +1,5 @@
 <?php
-  $v = "2"
+  $v = "3"
 ?><!doctype html>
 
 <html lang="en">
@@ -20,6 +20,7 @@
 
 <body>
   <div class="container pt-3 pb-5">
+    <h1 class="text-center">⏲️ Easy Poker Blinds</h1>
     <div class="card border-primary mb-3 settings">
       <div class="card-header">⚙️ Settings</div>
       <div class="card-body">
@@ -70,6 +71,7 @@
         <h2 class="text-center" id="timer"></h2>
         <div class="text-center">
           <button id="prev" type="button" class="btn btn-primary btn-lg">⬅️</button>
+          <button id="toggle_button" type="button" class="btn btn-primary btn-lg">⏯️ Start/Pause</button>
           <button id="next" type="button" class="btn btn-primary btn-lg">➡️</button>
         </div>
       </div>
@@ -93,7 +95,8 @@
       </div>
     </div>
     <div class="text-center">
-      Made with ❤️ by <a href="https://www.wanieru.com">Wanieru</a>
+      <p>Made with ❤️ by <a href="https://www.wanieru.com">Wanieru</a></p>
+      <p><a href="https://github.com/wanieru/easy-poker-blinds">Easy Poker Blinds</a> on Github</p>
     </div>
   </div>
   <script src="js/main.js?v=<?php echo $v; ?>"></script>

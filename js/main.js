@@ -17,6 +17,14 @@ function update()
   {
     $("#timer").text("");
   }
+  if(counting)
+  {
+    $("#timer").removeClass("text-warning");
+  }
+  else
+  {
+    $("#timer").addClass("text-warning");
+  }
 }
 function tick()
 {
@@ -147,9 +155,15 @@ function settings_button()
   $(".initially_hidden").hide();
   $(".settings").show();
 }
+function toggle_button()
+{
+  counting = !counting;
+  update();
+}
 
 $("#start_button").click(go);
 $("#prev").click(function(){move(-1);});
 $("#next").click(function(){move(1);});
 $(".initially_hidden").hide();
 $("#settings_button").click(settings_button);
+$("#toggle_button").click(toggle_button);
