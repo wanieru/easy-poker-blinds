@@ -1,5 +1,5 @@
 <?php
-  $v = "1"
+  $v = "2"
 ?><!doctype html>
 
 <html lang="en">
@@ -91,6 +91,9 @@
           </tbody>
         </table>
       </div>
+    </div>
+    <div class="text-center">
+      Made with ❤️ by <a href="https://www.wanieru.com">Wanieru</a>
     </div>
   </div>
   <script src="js/main.js?v=<?php echo $v; ?>"></script>
