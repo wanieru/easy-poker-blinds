@@ -52,11 +52,10 @@
           <label for="test" class="col-sm-4 col-form-label">📈 Blind Increment</label>
           <div class="col-sm-6">
             <select class="custom-select" id="rate">
-              <option value="1.25">🙂 Low (1.25x)</option>
-              <option value="1.5" selected>😄 Normal (1.5x)</option>
-              <option value="1.75">🤔 Medium (1.75x)</option>
-              <option value="2">😑 High (2x)</option>
-              <option value="2.5">😰 Extreme (2.5x)</option>
+              <option value="1.1">🙂 Low (1.1x)</option>
+              <option value="1.25" selected>😄 Normal (1.25x)</option>
+              <option value="1.5">🤔 Medium (1.5x)</option>
+              <option value="2">😰 Extreme (2x)</option>
             </select>
           </div>
         </div>

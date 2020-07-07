@@ -59,7 +59,7 @@ function go()
   var rate = $("#rate").val();
   var starting_percentage = 0.01;
 
-  var small_blind_goal1 = chips * players * 0.5 * 0.5; //Big blind ends up being half of all chips
+  var small_blind_goal1 = chips * 0.5 * 0.5; //Big blind ends up being half of all chips
   var small_blind_goal2 = chips * players * 0.5; //Big blind ends up being all chips in the game.
 
   schedule = [];
@@ -125,13 +125,16 @@ function next(prev, base)
   var ten = Math.pow(10, rounded); //Get the 10 exponent corrosponding to this order of magnitude
   var coefficient = prev / ten;
   var nearest_half = Math.round(coefficient * 2) / 2;
-  nearest_half += 0.5;
+
+  var increment = 0.5;
+
+  nearest_half += increment;
   if(nearest_half > 5) nearest_half = 10;
 
-  var final = nearest_half * ten;
+  var final = Math.round(nearest_half * ten);
   if(final % base != 0) return next(final, base);
 
-  return nearest_half * ten;
+  return final;
 }
 function approach(start, target, base)
 {
